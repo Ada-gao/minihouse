@@ -1,0 +1,51 @@
+/* components/footer.wxss */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 750rpx;
+  font-size: 32rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-top: 1rpx solid #ccc;
+  background-color: #fff;
+}
+.footer-wrapper {
+  width: 100%;
+  display: flex;
+}
+.footer .pic {
+  width: 64rpx;
+  height: 64rpx;
+  margin-left: 30rpx;
+  margin-top: 18rpx;
+}
+.footer .text {
+  /* flex: 3; */
+  /* width: 400rpx; */
+  /* padding-left: 30rpx; */
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-left: 20rpx;
+}
+
+.footer .sub_text {
+  color: #787878;
+  display: inline;
+  font-size: 28rpx;
+}
+
+.footer .footer-btn {
+  width: 256rpx;
+  background-color: #ce3e14;
+  color: #fff;
+  border-radius: 0;
+  border: none;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

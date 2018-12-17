@@ -1,0 +1,26 @@
+<!--pages/service/service.wxml-->
+<view class="container">
+    <image class="img" src="/images/service_top.png" alt="" />
+    <view class="weui-cells weui-cells_after-title">
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">
+        <image class="icon_img" src="/images/service_lawyer.png"></image>律师服务</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">
+        <image class="icon_img" src="/images/service_feeScale.png"></image>收费标准</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">
+        <image class="icon_img" src="/images/service_recruit.png"></image>招募信息</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+    <!-- <ul class="container log-list">
+      <li v-for="(log, index) in logs" :class="{ red: aa }" :key="index" class="log-item">
+        <card :text="(index + 1) + ' . ' + log"></card>
+      </li>
+    </ul> -->
+  </view>

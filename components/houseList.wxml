@@ -1,0 +1,22 @@
+<!--components/houseList.wxml-->
+<view class="recommend_list">
+  <view class="recommend_item" wx:for="{{recommendList}}" wx:key="index" bindtap='handleDetail' data-item="{{item}}">
+    <view class="left_img">
+      <image class="left_img" src="{{item.imgSrc}}" alt="" />
+    </view>
+    <view class="right_info">
+      <view class="main_info">{{item.houseType}}</view>
+      <view class="second_info">{{item.houseSize}}</view>
+      <view class="third_info">
+        <i class="address">{{item.address}}</i>
+        <i class="price">{{item.totalPrice}}</i>
+      </view>
+      <view class="tags_info">
+        <i class="tag" wx:for="{{item.houseTag}}" wx:key="index" wx:for-item="tag">
+        {{tag}}</i>
+        <i class="average">{{item.averagePrice}}</i>
+      </view>
+    </view>
+    <view class="split"></view>
+  </view>
+</view>

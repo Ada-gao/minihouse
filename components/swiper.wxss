@@ -1,0 +1,19 @@
+/* components/swiper.wxss */
+.swiper-wrapper {
+  width: 750rpx;
+  height: 420rpx;
+}
+.swiperList {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-item {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-image {
+  width: 100%;
+  height: 100%;
+}

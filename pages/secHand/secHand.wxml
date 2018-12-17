@@ -1,0 +1,6 @@
+<!--pages/secHand/secHand.wxml-->
+<view class="container">
+  <search wx:if="{{fromIndex !== '我的'}}"></search>
+  <sort wx:if="{{fromIndex !== '我的'}}" fromIndex="{{fromIndex}}"></sort>
+  <houseList></houseList>
+</view>

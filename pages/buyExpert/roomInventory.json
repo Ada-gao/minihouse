@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "找房清单",
+  "usingComponents": {
+    "footer": "/components/footer"
+  }
+}

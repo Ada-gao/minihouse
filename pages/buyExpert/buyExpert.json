@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "买房专家",
+  "usingComponents": {
+    "footer": "/components/footer"
+  }
+}

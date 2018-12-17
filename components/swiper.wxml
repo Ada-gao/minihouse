@@ -1,0 +1,20 @@
+<!--components/swiper.wxml-->
+<view class="swiper-wrapper">
+  <swiper class="swiperList"
+    indicator-dots="true"
+    indicator-color="#fff"
+    indicator-active-color="#ce3e14">
+    <!-- <swiper-item v-for="(item, index) in imgUrls" :key="index">
+      <image :src="item.src" class="swiper-image"></image>
+    </swiper-item> -->
+    <swiper-item>
+      <image class="swiper-image" src="/images/swiper1.png" alt="" />
+    </swiper-item>
+    <swiper-item>
+      <image class="swiper-image" src="/images/swiper2.png" alt="" />
+    </swiper-item>
+    <swiper-item>
+      <image class="swiper-image" src="/images/swiper3.png" alt="" />
+    </swiper-item>
+  </swiper>
+</view>

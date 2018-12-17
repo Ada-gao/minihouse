@@ -1,0 +1,89 @@
+/* pages/houseInfo/houseInfo.wxss */
+
+.swiperList {
+  width: 750rpx;
+  height: 420rpx;
+}
+
+swiper-item {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-image {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.split {
+  border-bottom: 1px solid #ccc;
+}
+
+.roadInfo {
+  padding: 30rpx 0;
+}
+
+.roadInfo .roadItem {
+  font-size: 28rpx;
+  width: 100%;
+  display: block;
+}
+.roadInfo .fs-36 {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.houseInfo {
+  display: flex;
+  padding: 30rpx 0;
+}
+
+.threeParam {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.paramTitle {
+  font-size: 32rpx;
+}
+
+.paramData {
+  color: #ce3e14;
+  font-size: 36rpx;
+}
+
+.houseDetail {
+  padding: 30rpx 0;
+  font-size: 28rpx;
+}
+
+.tag i {
+  border: 1px solid rgb(218, 178, 115);
+  color: rgb(218, 178, 115);
+  display: inline;
+  padding: 5rpx 8rpx;
+  margin-right: 10rpx;
+  border-radius: 4rpx;
+}
+
+.item-detail {
+  display: flex;
+}
+
+.item-detail p {
+  flex: 1;
+}
+.recommend_title {
+  padding-left: 30rpx;
+}
+.mb-20 {
+  margin-bottom: 30rpx;
+}

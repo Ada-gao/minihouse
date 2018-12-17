@@ -1,0 +1,110 @@
+/* components/houseList.wxss */
+
+.recommend_list {
+  width: 750rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  margin-bottom: 100rpx;
+}
+
+.recommend_item {
+  display: flex;
+  padding: 32rpx 0;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.left_img {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+
+.right_info {
+  width: 510rpx;
+}
+
+.main_info {
+  font-size: 32rpx;
+}
+
+.second_info, .third_info, .tags_info {
+  font-size: 26rpx;
+}
+
+.third_info .price {
+  display: inline;
+  float: right;
+  color: #ce3e3c;
+  font-size: 32rpx;
+}
+
+.address {
+  display: inline;
+  color: #505050;
+}
+.tags_info {
+  position: relative;
+}
+.tags_info .tag {
+  display: inline;
+  border: 1rpx solid #dab273;
+  color: #dab273;
+  padding: 2rpx 10rpx;
+  margin-right: 10rpx;
+  border-radius: 4rpx;
+}
+
+.tags_info .average {
+  color: #505050;
+  position: absolute;
+  right: 0;
+}
+
+/* width 100%
+  .recommend_item
+    position relative
+    display flex
+    padding 30rpx
+    .split
+      position absolute
+      bottom 0
+      width 690rpx
+      height 1rpx
+      border-bottom 1rpx solid rgb(230 230 230)
+    .left_img
+      width 160rpx
+      height 165rpx
+      border-radius 10rpx
+      margin-right 20rpx
+    .right_info
+      width 100%
+      .main_info
+        font-size 32rpx
+      .second_info,
+      .third_info,
+      .tags_info
+        font-size 26rpx
+      .third_info
+        .price
+          display inline
+          float right
+          color rgb(206 62 20)
+          font-size 32rpx
+        .address
+          display inline
+          color rgb(80 80 80)
+      .tags_info
+        position relative
+        .tag
+          border 1px solid rgb(218, 178, 115)
+          color rgb(218, 178, 115)
+          display inline
+          padding 5rpx 8rpx
+          margin-right 10rpx
+          border-radius 4rpx
+        .average
+          color rgb(80 80 80)
+          position absolute
+          right 0
+          top 0 */

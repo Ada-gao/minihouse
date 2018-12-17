@@ -1,0 +1,9 @@
+<!--components/footer.wxml-->
+<view class="footer">
+  <cover-view class="footer-wrapper">
+    <cover-image class="pic" src="/images/avatar.png" />
+    <cover-view class="text">某某某</cover-view>
+    <cover-view class="text sub_text">经纪人</cover-view>
+    <button class="footer-btn" bindtap="callPhone">电话联系</button>
+  </cover-view>
+</view>

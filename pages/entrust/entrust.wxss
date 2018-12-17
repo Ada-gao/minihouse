@@ -1,0 +1,59 @@
+/* pages/entrust/entrust.wxss */
+
+.main {
+  width: 100%;
+  padding: 0 30rpx 0 0;
+  box-sizing: border-box;
+}
+
+.position-r {
+  position: relative;
+}
+
+.split-line {
+  position: absolute;
+  width: 4rpx;
+  height: 100%;
+  background-color: #E6E6E6;
+  left: -30rpx;
+}
+
+.weui-cells {
+  font-size: 32rpx;
+}
+
+.weui-cell {
+  height: 124rpx;
+  box-sizing: border-box;
+}
+
+.weui-cell_input {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.weui-label.w330 {
+  width: 330rpx;
+}
+
+.weui-cell__bd {
+  text-align: right;
+}
+
+.radio-btn {
+  background-color: #e6e6e6;
+  display: inline-block;
+  width: 104rpx;
+  height: 64rpx;
+  /* padding: 20rpx 10rpx; */
+  box-sizing: border-box;
+  border-radius: 36rpx;
+  /* outline-style: none; */
+  color: #787878;
+  margin-left: 30rpx;
+  text-align: center;
+  line-height: 64rpx;
+}
+.required {
+  color: #CE3E14;
+}

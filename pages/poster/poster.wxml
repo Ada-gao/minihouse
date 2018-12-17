@@ -1,0 +1,7 @@
+<!--pages/poster/poster.wxml-->
+<view class="container">
+    <view class="main">
+      <image class="img" src="/images/poster.png" alt="" />
+      <button class="weui-btn submit-btn">将图片保存到本地</button>
+    </view>
+  </view>

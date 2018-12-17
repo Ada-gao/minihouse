@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/secHand/secHand",
+    "pages/newHouse/newHouse",
+    "pages/rent/rent",
+    "pages/entrust/entrust",
+    "pages/buyExpert/buyExpert",
+    "pages/service/service",
+    "pages/personal/personal",
+    "pages/poster/poster",
+    "pages/houseInfo/houseInfo",
+    "pages/buyExpert/roomInventory"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "交易平台",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#e6e6e6",
+    "selectedColor": "#ce3e14",
+    "backgroundColor": "#fff",
+    "borderStyle": "#a8a8a8",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/images/transc.png",
+        "selectedIconPath": "/images/transc-select.png",
+        "color": "white",
+        "text": "交易平台"
+      },
+      {
+        "pagePath": "pages/service/service",
+        "iconPath": "/images/service.png",
+        "selectedIconPath": "/images/service-select.png",
+        "text": "服务说明"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "iconPath": "/images/personal.png",
+        "selectedIconPath": "/images/personal-select.png",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

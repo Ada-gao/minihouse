@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "房东委托",
+  "usingComponents": {
+    "footer": "/components/footer"
+  }
+}

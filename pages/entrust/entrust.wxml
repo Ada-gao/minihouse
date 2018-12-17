@@ -1,0 +1,119 @@
+<!--pages/entrust/entrust.wxml-->
+<view class="container">
+  <view class="main">
+    <!-- <view class="weui-cells__title">房产信息</view> -->
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">
+            <text class="required">*</text>手机号
+          </view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入手机号" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">小区名称</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder=" " />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">楼号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder=" " />
+        </view>
+        <view class="weui-cell__hd position-r">
+          <i class="split-line"></i>
+          <view class="weui-label">房门号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder=" " />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">委托类型</view>
+        </view>
+        <view class="weui-cell__bd">
+          <text class="radio-btn">出售</text>
+          <text class="radio-btn">出租</text>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">面积（m²）</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder=" " />
+        </view>
+        <view class="weui-cell__hd position-r">
+          <i class="split-line"></i>
+          <view class="weui-label">户型</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder=" " />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">价格（元/月）</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder=" " />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">是否唯一</view>
+        </view>
+        <view class="weui-cell__bd">
+          <text class="radio-btn">是</text>
+          <text class="radio-btn">否</text>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">产证满几年</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder=" " />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label w330">是否可随时看房</view>
+        </view>
+        <view class="weui-cell__bd">
+          <text class="radio-btn">是</text>
+          <text class="radio-btn">否</text>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label w330">什么时候方便接听电话</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="time" :value="time" start="09:01" end="21:01" bindchange="bindTimeChange">
+            <view class="weui-input">{{time}}</view>
+          </picker>
+          <!-- <picker mode="date" :value="date" start="2015-09-01" end="2017-09-01" @change="bindDateChange"> <view class="picker"> 当前选择: {{date}} </view> </picker> -->
+        </view>
+      </view>
+    </view>
+    <button class="weui-btn submit-btn">提交</button>
+  </view>
+  <footer></footer>
+  <!-- <view class="footer">
+    <image class="pic" src="/images/avatar.png"></image>
+    <p>某某某
+      <i>经纪人</i>
+    </p>
+    <button>电话联系</button>
+  </view> -->
+</view>

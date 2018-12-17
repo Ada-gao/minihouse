@@ -1,0 +1,6 @@
+/* pages/poster/poster.wxss */
+.img {
+  width: 690rpx;
+  height: 920rpx;
+  margin-top: 30rpx;
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "category": "/components/category",
+    "houseList": "/components/houseList"
+  }
+}

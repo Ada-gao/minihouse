@@ -1,0 +1,99 @@
+<!--pages/buyExpert/buyExpert.wxml-->
+<view class="container">
+  <view class="main">
+    <view class="weui-cells weui-cells_after-title intend">
+      <!-- <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label w330">是否有意向地址</view>
+          </view>
+          <view class="weui-cell__bd text-right">
+            <span class="radio-btn">是</span>
+            <span class="radio-btn">否</span>
+          </view>
+        </view> -->
+      <view class="weui-cell weui-cell_switch weui-border-b">
+        <view class="weui-cell__bd">是否有意向地址</view>
+        <view class="weui-cell__ft">
+          <switch checked bindchange="switchChange" />
+        </view>
+      </view>
+      <!-- <view class="weui-cell weui-cell_switch weui-border-b" wx:if="{{haveAddress}}">
+          <view class="weui-cell__bd fw-700">有意向地址</view>
+        </view> -->
+      <view class="weui-cell weui-cell_input weui-border-b" wx:if="{{haveAddress}}">
+        <view class="weui-cell__bd">
+          <input type="text" bindinput="bindAddressInput" placeholder="输入具体地址快速查找意向房源信息" />
+        </view>
+      </view>
+    </view>
+    <view class="condition" wx:if="{{!haveAddress}}">
+      <view class="condition-item range">
+        <h5 class="recommend_title mb-20">您的购房预算</h5>
+        <!-- <view class="range-title issues-content">{{form.sliderValueText||0}}万</view> -->
+        <view class="range-title issues-content">{{budgetValue||0}}万</view>
+        <slider value="{{budgetValue}}" min="{{sliderMin}}" max="{{sliderMax}}" bindchange="bindSliderChange" />
+      </view>
+      <view class="condition-item">
+        <h5 class="recommend_title mb-20">您的意向户型</h5>
+        <view class="weui-cells weui-cells_after-title">
+          <checkbox-group bindchange="checkboxChange" data-value="{{item.value}}">
+            <label class="weui-cell weui-check__label" wx:for="{{checkboxItems}}" wx:key="index">
+              <checkbox class="weui-check checkbox-item" value="{{item.value}}" checked="{{item.checked}}" />
+              <view class="weui-cell__bd {{item.checked ? 'red': ''}}">{{item.name}}</view>
+            </label>
+          </checkbox-group>
+        </view>
+      </view>
+      <view class="condition-item">
+        <!-- <h5 class="recommend_title mb-20">意向区域（松江）</h5> -->
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_select">
+            <view class="weui-cell__hd weui-cell__hd_in-select-after" style="white-space: nowrap; padding-left: 0">
+              <view class="weui-label">意向区域（松江）</view>
+            </view>
+            <view class="weui-cell__bd" style="text-align: right">
+              <picker title="松江" bindchange="bindCountryCodeChange" range="{{countryCodes}}" range-key="label">
+                <view class="weui-select" style="border-right: none">{{countryCodes[countryCodesIndex].label}}</view>
+              </picker>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="condition-item">
+        <h5 class="recommend_title mb-20">房源标签</h5>
+        <view class="weui-cells weui-cells_after-title">
+          <checkbox-group bindchange="checkboxChange1">
+            <label class="weui-cell weui-check__label" wx:for="{{checkboxItems1}}" wx:key="index">
+              <checkbox class="weui-check checkbox-item" value="{{item.value}}" checked="{{item.checked}}" />
+              <view class="weui-cell__bd {{item.checked ? 'red': ''}}">{{item.name}}</view>
+            </label>
+          </checkbox-group>
+        </view>
+      </view>
+      <view class="condition-item">
+        <h5 class="recommend_title mb-20">楼高</h5>
+        <view class="weui-cells weui-cells_after-title">
+          <checkbox-group bindchange="checkboxChange2">
+            <label class="weui-cell weui-check__label" wx:for="{{checkboxItems2}}" wx:key="index">
+              <checkbox class="weui-check checkbox-item" value="{{item.value}}" checked="{{item.checked}}" />
+              <view class="weui-cell__bd {{item.checked ? 'red': ''}}">{{item.name}}</view>
+            </label>
+          </checkbox-group>
+        </view>
+      </view>
+      <view class="condition-item">
+        <h5 class="recommend_title mb-20">楼层区</h5>
+        <view class="weui-cells weui-cells_after-title">
+          <checkbox-group bindchange="checkboxChange3">
+            <label class="weui-cell weui-check__label" wx:for="{{checkboxItems3}}" wx:key="index">
+              <checkbox class="weui-check checkbox-item" value="{{item.value}}" checked="{{item.checked}}" />
+              <view class="weui-cell__bd {{item.checked ? 'red': ''}}">{{item.name}}</view>
+            </label>
+          </checkbox-group>
+        </view>
+      </view>
+    </view>
+    <button class="weui-btn submit-btn" bindtap="submitHandle">确认</button>
+  </view>
+  <footer></footer>
+</view>

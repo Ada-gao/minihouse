@@ -1,0 +1,39 @@
+<!--pages/buyExpert/roomInventory.wxml-->
+<view class="container">
+  <view class="main">
+    <view class="weui-cells weui-cells_after-title fs-32" wx:if="{{address}}">
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">{{address}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+    <view class="weui-cells weui-cells_after-title fs-28" wx:else>
+      <navigator url="" class="weui-cell_access flex" hover-class="weui-cell_active">
+        <p class="flex-item">预算：{{form.sliderValueText}}万元</p>
+        <p class="flex-item">户型：
+          <span wx:for="{{form.checked}}" wx:key="index">{{item}} </span>
+        </p>
+        <p class="flex-item">位置：{{}}</p>
+        <p class="flex-item">喜欢：
+          <span wx:for="{{form.likeList}}" wx:key="index">{{item}}
+            <span wx:if="{{index < form.likeList.length - 1}}">、</span>
+          </span>
+        </p>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+    <view class="condition-item">
+      <text class="recommend_title fw-700 mb-20">您的找房需求已收到</text>
+      <text class="sec_title">为方便您的经纪人帮您找到合适的房源，请留下您的手机号</text>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <input type="number" maxlength="11" bindinput="bindMobileInput" placeholder="请输入手机号" />
+        </view>
+      </view>
+    </view>
+    <button class="weui-btn submit-btn">提交</button>
+  </view>
+  <footer></footer>
+</view>

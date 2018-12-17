@@ -1,0 +1,35 @@
+<!--pages/personal/personal.wxml-->
+<view class="container">
+  <view class="weui-cells weui-cells_after-title">
+    <navigator url="/pages/secHand/secHand?from=我的" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <image class="icon_img" src="/images/personal_house.png"></image>我的房子</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="/pages/poster/poster" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <image class="icon_img" src="/images/personal_poster.png"></image>我的海报</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <image class="icon_img" src="/images/personal_star.png"></image>通过我的海报关注的人</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <image class="icon_img" src="/images/personal_collect.png"></image>我的收藏</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <image class="icon_img" src="/images/personal_agent.png"></image>我的经纪人</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+  <!-- <ul class="container log-list">
+      <li v-for="(log, index) in logs" :class="{ red: aa }" :key="index" class="log-item">
+        <card :text="(index + 1) + ' . ' + log"></card>
+      </li>
+    </ul> -->
+</view>

@@ -1,0 +1,7 @@
+<!--components/category.wxml-->
+<view class="categoryList">
+  <view wx:for="{{categoryList.pageone}}" class="category-info" wx:key="index" bindtap='choose' data-item='{{item}}'>
+    <image src="{{item.src}}" class="category-image" />
+    <view class="category-text">{{item.name}}</view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view class='tabBar'>
+    <view class='tabBarTitle'>
+      <text>交易平台</text>
+    </view>
+  </view> -->
+  <view class="top">
+    <image class="mainImg" src="/images/banner.png" alt="" />
+    <view class="search">
+      <view class="sort">
+        <picker bindchange="bindAccountChange" value="{{houseIndex}}" range="{{houses}}">
+          <view class="weui-select">{{houses[houseIndex]}}</view>
+        </picker>
+      </view>
+      <image src="/images/search.png" class="heard-search-icon" />
+      <input class="inputing" type="text" placeholder="请输入小区名"></input>
+    </view>
+  </view>
+  <category></category>
+  <view class="recommend_title">为你推荐</view>
+  <houseList></houseList>
+</view>
