@@ -9,35 +9,35 @@
   </view>
   <!-- 售价 -->
   <view class="sort">
-  <picker class="sort-picker" bindchange="bindPriceChange" value="{{priceIndex}}" range="{{price}}">
+    <picker class="sort-picker" bindchange="bindPriceChange" value="{{priceIndex}}" range="{{price}}">
       <view class="weui-select">{{priceDefault ? priceDefault :price[priceIndex]}}</view>
     </picker>
     <image class="down_arrow" src="/images/down.png" style="width:20rpx;height:20rpx;" />
   </view>
   <!-- 户型 -->
   <view class="sort">
-  <picker class="sort-picker" bindchange="bindHouseTypeChange" value="{{houseTypeIndex}}" range="{{houseType}}">
+    <picker class="sort-picker" bindchange="bindHouseTypeChange" value="{{houseTypeIndex}}" range="{{houseType}}">
       <view class="weui-select">{{houseTypeDefault ? houseTypeDefault :houseType[houseTypeIndex]}}</view>
     </picker>
     <image class="down_arrow" src="/images/down.png" style="width:20rpx;height:20rpx;" />
   </view>
   <!-- 面积 -->
   <view class="sort" wx:if="{{fromIndex === '二手房'}}">
-  <picker class="sort-picker" bindchange="bindSizeChange" value="{{sizeIndex}}" range="{{size}}">
+    <picker class="sort-picker" bindchange="bindSizeChange" value="{{sizeIndex}}" range="{{size}}">
       <view class="weui-select">{{sizeDefault ? sizeDefault :size[sizeIndex]}}</view>
     </picker>
     <image class="down_arrow" src="/images/down.png" style="width:22rpx;height:22rpx;" />
   </view>
   <!-- 类型 -->
   <view class="sort" wx:elif="{{fromIndex === '新房'}}">
-  <picker class="sort-picker" bindchange="bindTypeChange" value="{{typesIndex}}" range="{{types}}">
+    <picker class="sort-picker" bindchange="bindTypeChange" value="{{typesIndex}}" range="{{types}}">
       <view class="weui-select">{{typesDefault ? typesDefault :types[typesIndex]}}</view>
     </picker>
     <image class="down_arrow" src="/images/down.png" style="width:22rpx;height:22rpx;" />
   </view>
   <!-- 是否合租 -->
   <view class="sort" wx:else>
-  <picker class="sort-picker" bindchange="bindSizeChange" value="{{joinRentIndex}}" range="{{joinRent}}">
+    <picker class="sort-picker" bindchange="bindSizeChange" value="{{joinRentIndex}}" range="{{joinRent}}">
       <view class="weui-select">{{joinRentDefault ? joinRentDefault :joinRent[joinRentIndex]}}</view>
     </picker>
     <image class="down_arrow" src="/images/down.png" style="width:22rpx;height:22rpx;" />

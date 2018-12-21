@@ -1,7 +1,7 @@
 {
   "navigationBarTitleText": "二手房",
   "usingComponents": {
-    "sort": "/components/sort",
+    "sort": "/components/swiperTab",
     "search": "/components/search",
     "houseList": "/components/houseList"
   }

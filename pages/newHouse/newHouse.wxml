@@ -1,6 +1,6 @@
 <!--pages/newHouse/newHouse.wxml-->
 <view class="container">
-  <search></search>
+  <search houseIndex="1"></search>
   <sort fromIndex="{{fromIndex}}"></sort>
   <houseList></houseList>
 </view>

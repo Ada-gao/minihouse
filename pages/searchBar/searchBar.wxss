@@ -1,4 +1,4 @@
-/* components/search.wxss */
+/* pages/searchBar.wxss */
 
 .heard {
   /* justify-content: space-around; */

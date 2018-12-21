@@ -1,12 +1,11 @@
 <!--pages/entrust/entrust.wxml-->
 <view class="container">
   <view class="main">
-    <!-- <view class="weui-cells__title">房产信息</view> -->
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
         <view class="weui-cell__hd">
           <view class="weui-label">
-            <text class="required">*</text>手机号
+            手机号（必填）
           </view>
         </view>
         <view class="weui-cell__bd">
@@ -15,96 +14,109 @@
       </view>
       <view class="weui-cell weui-cell_input">
         <view class="weui-cell__hd">
-          <view class="weui-label">小区名称</view>
+          <view class="weui-label subtitle" style="white-space: nowrap">房产信息（选填）</view>
         </view>
         <view class="weui-cell__bd">
-          <input class="weui-input" placeholder=" " />
+          <image class="down_arrow" hidden="{{!showIcon}}" bindtap="hideList" src="/images/go_down.png"></image>
+          <image class="down_arrow" hidden="{{showIcon}}" bindtap="showList" src="/images/go_up.png"></image>
         </view>
       </view>
-      <view class="weui-cell weui-cell_input">
-        <view class="weui-cell__hd">
-          <view class="weui-label">楼号</view>
+      <block wx:if="{{showIcon}}">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">小区名称</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder=" " />
+          </view>
         </view>
-        <view class="weui-cell__bd">
-          <input class="weui-input" placeholder=" " />
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label" style="width: 80rpx">楼号</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input half-input" placeholder=" " />
+          </view>
+        <!-- </view>
+        <view class="weui-cell weui-cell_input"> -->
+          <view class="weui-cell__hd position-r">
+            <i class="split-line"></i>
+            <view class="weui-label" style="width: 80rpx; white-space: nowrap">房门号</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder=" " />
+          </view>
         </view>
-        <view class="weui-cell__hd position-r">
-          <i class="split-line"></i>
-          <view class="weui-label">房门号</view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">委托类型</view>
+          </view>
+          <view class="weui-cell__bd">
+            <text class="radio-btn">出售</text>
+            <text class="radio-btn">出租</text>
+          </view>
         </view>
-        <view class="weui-cell__bd">
-          <input class="weui-input" placeholder=" " />
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label" style="width: 80rpx; white-space: nowrap">面积（m²）</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input half-input" placeholder=" " />
+          </view>
+          <view class="weui-cell__hd position-r">
+            <i class="split-line"></i>
+            <view class="weui-label" style="width: 80rpx; white-space: nowrap">户型</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder=" " />
+          </view>
         </view>
-      </view>
-      <view class="weui-cell weui-cell_input">
-        <view class="weui-cell__hd">
-          <view class="weui-label">委托类型</view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">价格（元/月）</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder=" " />
+          </view>
         </view>
-        <view class="weui-cell__bd">
-          <text class="radio-btn">出售</text>
-          <text class="radio-btn">出租</text>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">是否唯一</view>
+          </view>
+          <view class="weui-cell__bd">
+            <text class="radio-btn">是</text>
+            <text class="radio-btn">否</text>
+          </view>
         </view>
-      </view>
-      <view class="weui-cell weui-cell_input">
-        <view class="weui-cell__hd">
-          <view class="weui-label">面积（m²）</view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">产证满几年</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder=" " />
+          </view>
         </view>
-        <view class="weui-cell__bd">
-          <input class="weui-input" placeholder=" " />
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label w330">是否可随时看房</view>
+          </view>
+          <view class="weui-cell__bd">
+            <text class="radio-btn">是</text>
+            <text class="radio-btn">否</text>
+          </view>
         </view>
-        <view class="weui-cell__hd position-r">
-          <i class="split-line"></i>
-          <view class="weui-label">户型</view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label w330">什么时候方便接听电话</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker mode="time" :value="time" start="09:01" end="21:01" bindchange="bindTimeChange">
+              <view class="weui-input">{{time}}</view>
+            </picker>
+            <!-- <picker mode="date" :value="date" start="2015-09-01" end="2017-09-01" @change="bindDateChange"> <view class="picker"> 当前选择: {{date}} </view> </picker> -->
+          </view>
         </view>
-        <view class="weui-cell__bd">
-          <input class="weui-input" placeholder=" " />
-        </view>
-      </view>
-      <view class="weui-cell weui-cell_input">
-        <view class="weui-cell__hd">
-          <view class="weui-label">价格（元/月）</view>
-        </view>
-        <view class="weui-cell__bd">
-          <input class="weui-input" placeholder=" " />
-        </view>
-      </view>
-      <view class="weui-cell weui-cell_input">
-        <view class="weui-cell__hd">
-          <view class="weui-label">是否唯一</view>
-        </view>
-        <view class="weui-cell__bd">
-          <text class="radio-btn">是</text>
-          <text class="radio-btn">否</text>
-        </view>
-      </view>
-      <view class="weui-cell weui-cell_input">
-        <view class="weui-cell__hd">
-          <view class="weui-label">产证满几年</view>
-        </view>
-        <view class="weui-cell__bd">
-          <input class="weui-input" placeholder=" " />
-        </view>
-      </view>
-      <view class="weui-cell weui-cell_input">
-        <view class="weui-cell__hd">
-          <view class="weui-label w330">是否可随时看房</view>
-        </view>
-        <view class="weui-cell__bd">
-          <text class="radio-btn">是</text>
-          <text class="radio-btn">否</text>
-        </view>
-      </view>
-      <view class="weui-cell weui-cell_input">
-        <view class="weui-cell__hd">
-          <view class="weui-label w330">什么时候方便接听电话</view>
-        </view>
-        <view class="weui-cell__bd">
-          <picker mode="time" :value="time" start="09:01" end="21:01" bindchange="bindTimeChange">
-            <view class="weui-input">{{time}}</view>
-          </picker>
-          <!-- <picker mode="date" :value="date" start="2015-09-01" end="2017-09-01" @change="bindDateChange"> <view class="picker"> 当前选择: {{date}} </view> </picker> -->
-        </view>
-      </view>
+      </block>
     </view>
     <button class="weui-btn submit-btn">提交</button>
   </view>

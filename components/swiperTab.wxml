@@ -1,0 +1,97 @@
+<!--components/swiperTab.wxml-->
+<view class="nav-tab">
+  <view class="sort">
+    <view class="sort-tab none-l-line {{areaSelected ? 'selected' : ''}}" bindtap="showMaskTab" data-select="0">
+      <text>{{areaDefault}}</text>
+      <image class="down_arrow" src="/images/down.png" style="width:20rpx;height:20rpx;" />
+    </view>
+    <view class="sort-tab {{salePriceSelected ? 'selected' : ''}}" bindtap="showMaskTab" data-select="1">
+      <text>{{salePriceDefault}}</text>
+      <image class="down_arrow" src="/images/down.png" style="width:20rpx;height:20rpx;" />
+    </view>
+    <view class="sort-tab {{houseTypeSelected ? 'selected': ''}}" bindtap="showMaskTab" data-select="2">
+      <text>{{houseTypeDefault}}</text>
+      <image class="down_arrow" src="/images/down.png" style="width:20rpx;height:20rpx;" />
+    </view>
+    <view class="sort-tab {{sizeSelected ? 'selected': ''}}" bindtap="showMaskTab" data-select="3">
+      <text>{{sizeDefault}}</text>
+      <image class="down_arrow" src="/images/down.png" style="width:20rpx;height:20rpx;" />
+    </view>
+  </view>
+  <view class="tab-mask" hidden="{{showMask}}" bindtap="hideModal">
+    <view class="swiper-tab sort">
+      <view class="swiper-tab-item sort-tab none-l-line" data-current="0" catchtap="tabNav">
+        <text>{{areaDefault}}</text>
+        <image class="down_arrow" src="{{currentTab==0? '/images/down-select.png' : '/images/down.png'}}" style="width:20rpx;height:20rpx;" />
+      </view>
+      <view class="swiper-tab-item sort-tab" data-current="1" catchtap="tabNav">
+        <text>{{salePriceDefault}}</text>
+        <image class="down_arrow" src="{{currentTab==1? '/images/down-select.png' : '/images/down.png'}}" style="width:20rpx;height:20rpx;" />
+      </view>
+      <view class="swiper-tab-item sort-tab" data-current="2" catchtap="tabNav">
+        <text>{{houseTypeDefault}}</text>
+        <image class="down_arrow" src="{{currentTab==2? '/images/down-select.png' : '/images/down.png'}}" style="width:20rpx;height:20rpx;" />
+      </view>
+      <view class="swiper-tab-item sort-tab" data-current="3" catchtap="tabNav">
+        <text>{{sizeDefault}}</text>
+        <image class="down_arrow" src="{{currentTab==3? '/images/down-select.png' : '/images/down.png'}}" style="width:20rpx;height:20rpx;" />
+      </view>
+    </view>
+    <swiper current="{{currentTab}}" duration="0" class="swiper-box">
+      <!-- 区域 -->
+      <swiper-item class="area-item">
+        <view class="first-items">
+          <view class="bg-white">松江区</view>
+        </view>
+        <view class="second-items">
+          <view class="second-item" wx:for="{{areaList}}" wx:key="{{index}}" bindtap="clickArea" data-area="{{index}}">{{item}}</view>
+        </view>
+      </swiper-item>
+      <!-- 售价 -->
+      <swiper-item class="price-item">
+        <view class="weui-cells weui-cells_after-title" catchtap="salePriceChange">
+          <checkbox-group bindchange="salePriceChange">
+            <label class="weui-cell weui-check__label label-item {{item.checked ? 'price-selected': ''}}" wx:for="{{priceList}}" wx:key="{{index}}">
+              <checkbox class="weui-check checkbox-item" value="{{item.value}}" hidden checked="{{item.checked}}" /> {{item.name}}
+            </label>
+          </checkbox-group>
+        </view>
+        <view class="btn-box">
+          <button class="btn default-btn" disabled="{{priceSelectTempIdx.length === 0}}" catchtap="cancelPriceChoose">不限条件</button>
+          <button class="btn submit-btn" bindtap="submitPriceChoose">确定</button>
+        </view>
+      </swiper-item>
+      <!-- 户型 -->
+      <swiper-item class="price-item">
+        <view class="weui-cells weui-cells_after-title" catchtap="houseTypeChange">
+          <checkbox-group bindchange="houseTypeChange">
+            <label class="weui-cell weui-check__label label-item {{item.checked ? 'price-selected': ''}}" wx:for="{{houseTypeSelectList}}" wx:key="{{index}}">
+              <checkbox class="weui-check checkbox-item" value="{{item.value}}" hidden checked="{{item.checked}}" /> {{item.name}}
+            </label>
+          </checkbox-group>
+        </view>
+        <view class="btn-box">
+          <button class="btn default-btn" disabled="{{houseTypeTempIdx.length === 0}}" catchtap="cancelHouseTypeChoose">不限条件</button>
+          <button class="btn submit-btn" bindtap="submitHouseTypeChoose">确定</button>
+        </view>
+      </swiper-item>
+      <!--  面积 -->
+      <swiper-item class="price-item">
+        <!-- <view class="weui-cells weui-cells_after-title">
+          <checkbox-group bindchange="sizeChange">
+            <label class="weui-cell weui-check__label label-item {{item.checked ? 'price-selected': ''}}" wx:for="{{sizeList}}" wx:key="{{index}}">
+              <checkbox class="weui-check checkbox-item" value="{{item.value}}" hidden checked="{{item.checked}}" /> {{item.name}}
+            </label>
+          </checkbox-group>
+        </view> -->
+        <block wx:for="{{sizeList}}" wx:key="{{index}}">
+          <view class="label-item {{sizeSelectIdx == index ? 'price-selected': ''}}" data-size-idx="{{index}}" catchtap="singleSelection">{{item.name}}</view>
+        </block>
+        <view class="btn-box">
+          <button class="btn default-btn" disabled="{{sizeSelectIdx === -1}}" catchtap="cancelSizeChoose">不限条件</button>
+          <button class="btn submit-btn" bindtap="submitSizeChoose">确定</button>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

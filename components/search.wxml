@@ -1,10 +1,9 @@
 <!--components/search.wxml-->
 <view class="heard">
-  <!-- <view class="heard-location" bindtap="searchAddress">
-      <image src="/static/images/location.png" class="heard-location-icon"/>
-      <text class="heard-location-text">{{location}}</text>
-    </view> -->
-  <input class="heard-search" placeholder="请输入小区名">
-  </input>
-  <image src="/images/search.png" class="heard-search-icon" />
+  <view class="search-bar">
+    <label class="search-bar_label" bindtap="showInput">
+      <view class="heard-search text">请输入小区名</view>
+      <image src="/images/search.png" class="heard-search-icon" />
+    </label>
+  </view>
 </view>

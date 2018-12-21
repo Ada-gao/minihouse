@@ -11,7 +11,8 @@
     "pages/personal/personal",
     "pages/poster/poster",
     "pages/houseInfo/houseInfo",
-    "pages/buyExpert/roomInventory"
+    "pages/buyExpert/roomInventory",
+    "pages/searchBar/searchBar"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -14,7 +14,7 @@
         </picker>
       </view>
       <image src="/images/search.png" class="heard-search-icon" />
-      <input class="inputing" type="text" placeholder="请输入小区名"></input>
+      <view class="inputing" bindtap="bindSearch">请输入小区名</view>
     </view>
   </view>
   <category></category>

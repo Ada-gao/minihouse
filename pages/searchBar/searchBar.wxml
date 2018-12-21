@@ -1,0 +1,32 @@
+<!--pages/searchBar.wxml-->
+<view class="heard">
+  <view class="search-bar">
+    <view class="search-bar_form">
+      <input class="heard-search" value="{{inputVal}}" focus="{{inputShowed}}" placeholder="请输入小区名"  bindinput="inputTyping" />
+      <image src="/images/search.png" class="heard-search-icon" />
+    </view>
+    <text class="search-bar_cancel text" bindtap="hideInput">取消</text>
+  </view>
+  <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+    <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <view>实时搜索文本</view>
+      </view>
+    </navigator>
+    <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <view>实时搜索文本</view>
+      </view>
+    </navigator>
+    <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <view>实时搜索文本</view>
+      </view>
+    </navigator>
+    <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <view>实时搜索文本</view>
+      </view>
+    </navigator>
+  </view>
+</view>

@@ -14,7 +14,7 @@
   position: absolute;
   width: 4rpx;
   height: 100%;
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
   left: -30rpx;
 }
 
@@ -54,6 +54,17 @@
   text-align: center;
   line-height: 64rpx;
 }
-.required {
-  color: #CE3E14;
+
+.subtitle {
+  font-weight: bold;
+}
+
+.down_arrow {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.half-input {
+  padding-right: 50rpx;
+  box-sizing: border-box;
 }

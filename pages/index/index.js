@@ -18,6 +18,11 @@ Page({
       url: '../logs/logs'
     })
   },
+  bindSearch: function (e) {
+    wx.navigateTo({
+      url: `/pages/searchBar/searchBar?houseIndex=${this.data.houseIndex}`,
+    })
+  },
   bindAccountChange: function(e) {
     this.setData({
       houseIndex: e.detail.value
